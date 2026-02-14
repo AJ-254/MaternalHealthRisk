@@ -25,7 +25,7 @@ st.subheader("Enter Patient Health Data")
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    age = st.number_input("Age (years)", 15, 50, 25)
+    age = st.number_input("Age", min_value=12, max_value=60)
     body_temp = st.number_input("Body Temperature (°C)", 35.0, 40.0, 36.8)
 
 with col2:
@@ -49,14 +49,31 @@ if st.button("🔍 Predict Risk Level"):
 
     # Display Result
     st.markdown("---")
-    if risk_level == "Low Risk":
-        st.success("✅ Prediction: **Low Risk**\n\nEverything looks good! Keep maintaining a healthy lifestyle.")
-    elif risk_level == "Medium Risk":
-        st.warning("⚠️ Prediction: **Medium Risk**\n\nRegular checkups and monitoring are advised.")
-    else:
-        st.error("🚨 Prediction: **High Risk**\n\nSeek immediate medical attention for proper evaluation.")
 
-    st.markdown("---")
+if risk_level == "Low Risk":
+    st.success(
+        "✅ **Low Risk Identified**\n\n"
+        "Current indicators fall within low-risk thresholds. Continue routine antenatal care and healthy lifestyle practices."
+    )
+
+elif risk_level == "Medium Risk":
+    st.warning(
+        "⚠️ **Moderate Risk Identified**\n\n"
+        "Clinical parameters suggest moderate risk. Closer monitoring and regular antenatal follow-ups are recommended."
+    )
+
+else:
+    st.error(
+        "🚨 **High Risk Identified**\n\n"
+        "Indicators suggest elevated maternal risk. Immediate clinical assessment and intervention are strongly advised."
+    )
+
+st.markdown("---")
+
+st.info("This AI tool is for research and educational purposes only and does not replace professional medical judgment.")
+
 
 # === Footer ===
+st.caption("AI-powered risk assessment tool for antenatal screening.")
+
 st.caption("Developed by **Juliet Asiedu** | App still a work in progress 💡")
