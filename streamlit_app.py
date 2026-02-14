@@ -59,4 +59,4 @@ if st.button("🔍 Predict Risk Level"):
     st.markdown("---")
 
 # === Footer ===
-st.caption("Developed as part of the **AI for Software Engineering** course | Week 5 Assignment 💡")
+st.caption("Developed by **Juliet Asiedu** | App still a work in progress 💡")
