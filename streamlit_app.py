@@ -84,8 +84,6 @@ st.info("This AI tool is for research and educational purposes only and does not
 
 # === Footer ===
 
-
-
 st.markdown('<div style="text-align:center; color:#6c6c6c; font-size:12px;">AI-powered risk assessment tool for antenatal screening.</div>', unsafe_allow_html=True)
 
 st.markdown('<div style="text-align:center; color:#6c6c6c; font-size:12px;">Developed by <strong>Juliet Asiedu - RM 🩺</strong> 💡</div>', unsafe_allow_html=True)
